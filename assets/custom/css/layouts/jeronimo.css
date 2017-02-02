@@ -1,0 +1,38 @@
+/* Main Photo */
+.photo-01 {
+  background: url("../../images/layouts/userpics/userpic01.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 180px; }
+
+/* Timeline */
+.timeline-jeronimo-01,
+.timeline-jeronimo-02,
+.timeline-jeronimo-03,
+.timeline-jeronimo-04 {
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+
+.timeline-jeronimo-01 {
+  background: url("../../images/layouts/timeline/01.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.timeline-jeronimo-02 {
+  background: url("../../images/layouts/timeline/02.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.timeline-jeronimo-03 {
+  background: url("../../images/layouts/timeline/03.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.timeline-jeronimo-04 {
+  background: url("../../images/layouts/timeline/04.jpg");
+  background-position: center;
+  background-size: cover; }
+
+
