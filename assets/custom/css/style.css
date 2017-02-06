@@ -3231,7 +3231,6 @@ footer.light {
     display: initial; } }
 @media (max-width: 543px) {
 
-	
 	h5 {
     letter-spacing: 0; }
 
@@ -3278,12 +3277,12 @@ footer.light {
     min-height: 200px; }
 
   #top-navigation .menuitem {
-    min-height: 70px; }
+    min-height: 50px; }
     #top-navigation .menuitem a {
       margin-top: 24px; }
       #top-navigation .menuitem a span {
         font-weight: 400;
-        font-size: 13px; }
+        font-size: 10px; }
       #top-navigation .menuitem a i {
         display: none; }
 
