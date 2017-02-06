@@ -1,0 +1,53 @@
+         <!-- Personal Details 02 -->
+         <div id="personal" class="col-md-5 flex-column light ui-block-color01 personal">
+            <div class="padding-30 flex-panel">
+               <h3 class="font-accident-two-normal uppercase title">Personal Info</h3>
+               <div class="dividewhite3"></div>
+               <div>
+                  <div class="fullwidth box">
+                     <div class="one">
+                       <p class="uppercase">Name in citations</p>
+                     </div>
+                     <div class="two">
+                       <p>GRANDI, Jerônimo Gustavo</p>
+                       <p>GRANDI, Jerônimo G.</p>
+                     </div>
+                  </div>
+                  <div class="fullwidth box">
+                     <div class="one">
+                       <p class="uppercase text-nowrap">education<br>
+                       </p>
+                     </div>
+                     <div class="two"><p class="">PhD Student in Computer Science</p></div>
+                  </div>
+                 <div class="fullwidth box">
+                     <div class="one">
+                       <p class="uppercase text-nowrap">Research </p>
+                       <p class="uppercase text-nowrap">Group</p>
+                     </div>
+                     <div class="two">
+                       <p>Graphics, Visualization and Interaction Lab</p>
+                     </div>
+                 </div>
+                 <div class="fullwidth box">
+                     <div class="one">
+                       <p class="uppercase text-nowrap">University</p>
+                    </div>
+                     <div class="two">
+                       <p>Federal University of Rio Grande do Sul </p>
+                       <p>UFRGS </p>
+                     </div>
+                  </div>
+				<div class="fullwidth box">
+                     <div class="one">
+                       <p class="uppercase">email</p>
+                     </div>
+                     <div class="two">
+                       <p>jggrandi {at} inf.ufrgs.br</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="dividewhite1"></div>
+            </div>
+         </div>
+         <!-- /Personal Details 02 -->

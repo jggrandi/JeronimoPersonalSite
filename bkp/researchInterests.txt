@@ -1,0 +1,8 @@
+						   <li> Human-computer interaction (HCI) </li>
+						   <li> Virtual Reality (VR)</li>
+						   <li> Augmented Reality (AR)</li>
+						   <li> Collaborative Virtual Environments (CVEs)</li>
+						   <li> Non-conventional Interaction </li>
+						   <li> Medical applications in computer graphics </li>
+						   <li> Medical image processing </li>
+						   <li> Digital arts </li>
