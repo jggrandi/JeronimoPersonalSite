@@ -1199,7 +1199,12 @@ button, input, select, textarea {
   background: #008040 !important;
 }
 
-
+.breadcrumb { background: #008040; border-radius: 0px; display: block;}
+.breadcrumb ol li {font-size: #b3b3b3px;}
+.breadcrumb a {color: rgba(255, 255, 255, 1);}
+.breadcrumb a:hover {color: rgba(42, 100, 150, 1);}
+.breadcrumb>.active {color: rgba(196, 196, 196, 1);}
+.breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
 /* Animated Title */
 .cd-intro {
   width: 90%;
