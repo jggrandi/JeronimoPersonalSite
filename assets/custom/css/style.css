@@ -793,6 +793,9 @@ ul.list-o {
 .padding-30 {
   padding: 30px 30px 30px 30px; }
 
+.padding-10-30-10-30 {
+  padding: 10px 30px 10px 30px; }
+
 .padding-0-30-30-0 {
   padding: 0 30px 30px 0; }
 
@@ -1197,14 +1200,16 @@ button, input, select, textarea {
         letter-spacing: 1px; }
 #top-navigation .breadcrumb-none{
   background: #008040 !important;
+  padding-left: 30px;
 }
 
-.breadcrumb { background: #008040; border-radius: 0px; display: block;}
-.breadcrumb ol li {font-size: #b3b3b3px;}
-.breadcrumb a {color: rgba(255, 255, 255, 1);}
-.breadcrumb a:hover {color: rgba(42, 100, 150, 1);}
-.breadcrumb>.active {color: rgba(196, 196, 196, 1);}
-.breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
+#mybread .breadcrumb { background: #008040; border-radius: 0px; display: block;padding-left: 30px;}
+#mybread .breadcrumb ol {font-size: #b3b3b3px; }
+#mybread .breadcrumb a {color: rgba(255, 255, 255, 1);}
+#mybread .breadcrumb a:hover {color: rgba(42, 100, 150, 1);}
+#mybread .breadcrumb>.active {color: rgba(196, 196, 196, 1);}
+#mybread .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
+
 /* Animated Title */
 .cd-intro {
   width: 90%;
@@ -2510,6 +2515,8 @@ text-align: justify;
 /* ------------------------------------ Content Container */
 .inner-content .inner-section {
   padding: 30px 60px; }
+.inner-content-30 .inner-section-30 {
+  padding: 30px 30px; }  
 .inner-content .inner-block {
   padding: 0 60px; }
 
@@ -3235,6 +3242,8 @@ footer.light {
   .media-body, .media-left, .media-right {
     display: initial; } }
 @media (max-width: 543px) {
+
+#mybread .breadcrumb { text-align: center;}
 
 	h5 {
     letter-spacing: 0; }
