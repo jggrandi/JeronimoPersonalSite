@@ -34,7 +34,20 @@
             $('#nav').addClass('ui-menu-color06');
         }
 
+        // Header Animations
+        if (scrollRevealEnabled()) {
+            scrollReveal(scrollRevealItems.header);
+        }
 
+        // Sections Animation
+        if (scrollRevealEnabled()) {
+            scrollReveal(scrollRevealItems.content);
+        }
+
+        // Footer Animations
+        if (scrollRevealEnabled()) {
+            scrollReveal(scrollRevealItems.footer);
+        }
 
         /** Back to top **/
         (function () {
@@ -66,43 +79,42 @@
         })();
     });
 
-
-    // /** Document ready handler **/
+    /** Document ready handler **/
     $(document).ready(function () {
         // Load scripts for each section (portfolio, counter ...)
         sectionsScripts();
+
+        /** Ajax page load settings **/
+        (function () {
+
+            if (ajaxLoadingEnabled()) {
+                $(document).pjax('a', '.content-wrap', {fragment: '.content-wrap', scrollTo: false});
+
+                $(document).on('pjax:click', function (event) {
+                    if (!ajaxLoadingEnabled()) {
+                        event.preventDefault();
+                        window.location.reload();
+                    }
+                });
+
+                $(document).on('pjax:end', function () {
+                    document.activeElement && document.activeElement.blur();
+                    sectionsScripts();
+                    // Sections Animation
+                    if (scrollRevealEnabled()) {
+                        scrollReveal(scrollRevealItems.content);
+                    }
+                });
+
+                $(document).on('pjax:beforeReplace', function () {
+                    $('.content-wrap')
+                        .velocity({ opacity: 0 }, { duration: 0 })
+                        .velocity({ opacity: 1 }, { duration: 300, easing: [ 0, 1, 1, 0 ] });
+                });
+            }
+
+        })();
     });
-    //     /** Ajax page load settings **/
-    //     (function () {
-
-    //         if (ajaxLoadingEnabled()) {
-    //             $(document).pjax('a', '.content-wrap', {fragment: '.content-wrap', scrollTo: false});
-
-    //             $(document).on('pjax:click', function (event) {
-    //                 if (!ajaxLoadingEnabled()) {
-    //                     event.preventDefault();
-    //                     window.location.reload();
-    //                 }
-    //             });
-
-    //             $(document).on('pjax:end', function () {
-    //                 document.activeElement && document.activeElement.blur();
-    //                 sectionsScripts();
-    //                 // Sections Animation
-    //                 if (scrollRevealEnabled()) {
-    //                     scrollReveal(scrollRevealItems.content);
-    //                 }
-    //             });
-
-    //             $(document).on('pjax:beforeReplace', function () {
-    //                 $('.content-wrap')
-    //                     .velocity({ opacity: 0 }, { duration: 0 })
-    //                     .velocity({ opacity: 1 }, { duration: 300, easing: [ 0, 1, 1, 0 ] });
-    //             });
-    //         }
-
-    //     })();
-    // });
 
     /** Set of sections scripts **/
     function sectionsScripts() {
@@ -248,74 +260,18 @@
 
                 grid.isotope({filter: '*'});
 
-                var filters = {};
-
                 // filter items on button click
                 $('#isotope-filters').on('click', 'a', function () {
-                    var $this = $(this);
-                    var $buttonGroup = $this.parents('.port-filter');
-                    var filterGroup = $(this).attr('data-filter-group');
-                    console.log(filterGroup);
-                    filters[ filterGroup ] = filterGroup.attr('data-filter');
-                    var filterValue = concatValues( filters );
-                    
+                    var filterValue = $(this).attr('data-filter');
                     grid.isotope({filter: filterValue});
                 });
 
-                function concatValues( obj ) {
-                  var value = '';
-                  for ( var prop in obj ) {
-                    value += obj[ prop ];
-                  }
-                  return value;
-                }
-
-                // // filter items on tag click
-                // $('.post-tag').on('click', 'a', function () {
-                //     var filterValue = $(this).attr('data-filter');
-                //     grid.isotope({filter: filterValue});
-                //     $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
-                // });
-
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.color-shape'
-});
-
-// store filter for each group
-var filters = {};
-
-$('.filters').on( 'click', '.button', function() {
-  var $this = $(this);
-  // get group key
-  var $buttonGroup = $this.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  filters[ filterGroup ] = $this.attr('data-filter');
-  // combine filters
-  var filterValue = concatValues( filters );
-  // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
-});
-
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-  
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
-               
+                // filter items on tag click
+                $('.post-tag').on('click', 'a', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    grid.isotope({filter: filterValue});
+                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
+                });
             }
         })();
 
@@ -526,15 +482,7 @@ function concatValues( obj ) {
 
 })(jQuery);
 
-/** Google Analytics **/
-//(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-//        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-//    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-//})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-// set yor id
-//ga('create', 'UA-40696437-5', 'auto');
-//ga('send', 'pageview');
 
 
 
