@@ -225,43 +225,77 @@
                     fixedContentPos: false
                 });
 
+ 
+
                 // Isotope Portfolio
-                var grid = $('.grid').isotope({
+                var $grid = $('.grid').isotope({
                     itemSelector: '.grid-item',
                     percentPosition: true,
                     transitionDuration: '0.6s',
-                    hiddenStyle: {
-                        opacity: 0
-                    },
-                    visibleStyle: {
-                        opacity: 1
-                    },
-                    masonry: {
-                        // use outer width of grid-sizer for columnWidth
-                        columnWidth: '.grid-sizer'
-                    }
+                     // hiddenStyle: {
+                     //     opacity: 0
+                     // },
+                     // visibleStyle: {
+                     //     opacity: 1
+                     // },
+                     //masonry: {
+                         // use outer width of grid-sizer for columnWidth
+                     //    columnWidth: '.grid-sizer'
+                     //}
                 });
 
-                grid.imagesLoaded(function () {
-                    grid.isotope();
-                });
-
-                grid.isotope({filter: '*'});
-
+                // store filter for each group
                 var filters = {};
+
+                $grid.imagesLoaded(function () {
+                    $grid.isotope();
+                });
+
+
+
+                $grid.isotope({filter: '*'});
 
                 // filter items on button click
                 $('#isotope-filters').on('click', 'a', function () {
                     var $this = $(this);
                     var $buttonGroup = $this.parents('.port-filter');
-                    var filterGroup = $(this).attr('data-filter-group');
+                    var filterGroup = $buttonGroup.attr('data-filter-group');
                     console.log(filterGroup);
-                    filters[ filterGroup ] = filterGroup.attr('data-filter');
+                    filters[ filterGroup ] = $this.attr('data-filter');
                     var filterValue = concatValues( filters );
-                    
-                    grid.isotope({filter: filterValue});
+                    console.log(filters);
+                    $grid.isotope({filter: filterValue});
                 });
 
+                $('#isotope-filters2').on('click', 'a', function () {
+                    var $this = $(this);
+                    var $buttonGroup = $this.parents('.port-filter');
+                    var filterGroup = $buttonGroup.attr('data-filter-group');
+                    console.log(filterGroup);
+                    filters[ filterGroup ] = $this.attr('data-filter');
+                    var filterValue = concatValues( filters );
+                    console.log(filters);
+                    $grid.isotope({filter: filterValue});
+                });
+
+
+                // filter items on tag click
+                $('.post-tag').on('click', 'a', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({filter: filterValue});
+                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
+                });
+
+                // change is-checked class on buttons
+                $('.button-group').each( function( i, buttonGroup ) {
+                  var $buttonGroup = $( buttonGroup );
+                  $buttonGroup.on( 'click', 'button', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $( this ).addClass('is-checked');
+                  });
+                });
+                  
+                // flatten object by concatting values
                 function concatValues( obj ) {
                   var value = '';
                   for ( var prop in obj ) {
@@ -269,52 +303,6 @@
                   }
                   return value;
                 }
-
-                // // filter items on tag click
-                // $('.post-tag').on('click', 'a', function () {
-                //     var filterValue = $(this).attr('data-filter');
-                //     grid.isotope({filter: filterValue});
-                //     $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
-                // });
-
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.color-shape'
-});
-
-// store filter for each group
-var filters = {};
-
-$('.filters').on( 'click', '.button', function() {
-  var $this = $(this);
-  // get group key
-  var $buttonGroup = $this.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  filters[ filterGroup ] = $this.attr('data-filter');
-  // combine filters
-  var filterValue = concatValues( filters );
-  // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
-});
-
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-  
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
                
             }
         })();
