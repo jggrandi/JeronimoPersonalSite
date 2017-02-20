@@ -1867,9 +1867,33 @@ figure.effect-goliath {
     text-decoration: none;
     background: #e74c3c;
     color: #ffffff; }
-  #portfolio .port-filter-light ul li a:hover:after, #portfolio .port-filter-light ul li a:focus:after, #blog .port-filter-light ul li a:hover:after, #blog .port-filter-light ul li a:focus:after, #portfolio-item-page .port-filter-light ul li a:hover:after, #portfolio-item-page .port-filter-light ul li a:focus:after {
+
+  #portfolio .port-filter-light   .is-checked, #portfolio .port-filter-light .is-checked, #blog .port-filter-light .is-checked, #blog .port-filter-light .is-checked{
     border-color: #e74c3c transparent;
     opacity: 1; }
+  #portfolio .port-filter-light  .is-checked, #portfolio .port-filter-light .is-checked, #blog .port-filter-light .is-checked, #blog .port-filter-light .is-checked{
+    text-decoration: none;
+    background: #e74c3c;
+    color: #ffffff; }
+
+#portfolio .port-filter-light2 ul li a, #blog .port-filter-light2 ul li a, #portfolio-item-page .port-filter-light2 ul li a {
+  background: #f7f7f7;
+  color: #3f3f3f; }
+  #portfolio .port-filter-light2 ul li a:after, #blog .port-filter-light2 ul li a:after, #portfolio-item-page .port-filter-light2 ul li a:after {
+    border-color: #fff transparent; }
+  #portfolio .port-filter-light2 ul li a:hover, #portfolio .port-filter-light2 ul li a:focus, #blog .port-filter-light2 ul li a:hover, #blog .port-filter-light2 ul li a:focus, #portfolio-item-page .port-filter-light2 ul li a:hover, #portfolio-item-page .port-filter-light2 ul li a:focus {
+    text-decoration: none;
+    background: #007700;
+    color: #ffffff; }
+
+  #portfolio .port-filter-light2   .is-checked, #portfolio .port-filter-light2 .is-checked, #blog .port-filter-light2 .is-checked, #blog .port-filter-light2 .is-checked{
+    border-color: #007700 transparent;
+    opacity: 1; }
+  #portfolio .port-filter-light2   .is-checked, #portfolio .port-filter-light2 .is-checked, #blog .port-filter-light2 .is-checked, #blog .port-filter-light2 .is-checked{
+    text-decoration: none;
+    background: #007700;
+    color: #ffffff; }
+
 
 #portfolio2 .item-wrap {
   margin-bottom: 10px; }

@@ -260,10 +260,8 @@
                     var $this = $(this);
                     var $buttonGroup = $this.parents('.port-filter');
                     var filterGroup = $buttonGroup.attr('data-filter-group');
-                    console.log(filterGroup);
                     filters[ filterGroup ] = $this.attr('data-filter');
                     var filterValue = concatValues( filters );
-                    console.log(filters);
                     $grid.isotope({filter: filterValue});
                 });
 
@@ -271,10 +269,8 @@
                     var $this = $(this);
                     var $buttonGroup = $this.parents('.port-filter');
                     var filterGroup = $buttonGroup.attr('data-filter-group');
-                    console.log(filterGroup);
                     filters[ filterGroup ] = $this.attr('data-filter');
                     var filterValue = concatValues( filters );
-                    console.log(filters);
                     $grid.isotope({filter: filterValue});
                 });
 
@@ -285,16 +281,24 @@
                     $grid.isotope({filter: filterValue});
                     $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
                 });
-
                 // change is-checked class on buttons
-                $('.button-group').each( function( i, buttonGroup ) {
+                $('#isotope-filters').each( function( i, buttonGroup ) {
                   var $buttonGroup = $( buttonGroup );
-                  $buttonGroup.on( 'click', 'button', function() {
+                  $buttonGroup.on( 'click', 'a', function() {
                     $buttonGroup.find('.is-checked').removeClass('is-checked');
                     $( this ).addClass('is-checked');
                   });
                 });
-                  
+
+                // change is-checked class on buttons
+                $('#isotope-filters2').each( function( i, buttonGroup ) {
+                  var $buttonGroup = $( buttonGroup );
+                  $buttonGroup.on( 'click', 'a', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $( this ).addClass('is-checked');
+                  });
+                });
+
                 // flatten object by concatting values
                 function concatValues( obj ) {
                   var value = '';
@@ -303,7 +307,7 @@
                   }
                   return value;
                 }
-               
+            
             }
         })();
 
