@@ -2663,14 +2663,16 @@ text-align: justify;
           #blog .item-wrap figure figcaption .post-meta span {
             margin-right: 3px; }
         #blog .item-wrap figure figcaption .post-header {
-          text-transform: uppercase; }
+          /*text-transform: uppercase;*/ }
           #blog .item-wrap figure figcaption .post-header h5 {
-            font-size: 15px;
+            /*font-size: 15px;*/
             letter-spacing: 2px;
             line-height: 23px;
             font-weight: 600;
             margin-top: 5px;
-            margin-bottom: 14px; }
+            margin-bottom: 14px; 
+            text-align: justify;
+          }
         #blog .item-wrap figure figcaption .post-entry {
           margin-bottom: 21px; }
         #blog .item-wrap figure figcaption .post-tag {
