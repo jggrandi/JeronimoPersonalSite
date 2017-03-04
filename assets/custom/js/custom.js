@@ -225,7 +225,17 @@
                     fixedContentPos: false
                 });
 
- 
+                $('.panel-collapse a').click(function(e){
+                    $(".panel-collapse").collapse('hide');
+                    console.log($(e.target).text());
+                    $('.category a').text('Category: ' + $(e.target).text());
+                });
+
+                $('.panel-collapse2 a').click(function(e){
+                    $(".panel-collapse2").collapse('hide');
+                    console.log($(e.target).text());
+                    $('.year a').text('Year: ' + $(e.target).text());
+                });  
 
                 // Isotope Portfolio
                 var $grid = $('.grid').isotope({
