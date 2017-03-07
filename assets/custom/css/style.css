@@ -2665,13 +2665,14 @@ text-align: justify;
         #blog .item-wrap figure figcaption .post-header {
           /*text-transform: uppercase;*/ }
           #blog .item-wrap figure figcaption .post-header h5 {
-            /*font-size: 15px;*/
+            /*font-size: 15px;
+            text-align: justify;*/
             letter-spacing: 2px;
             line-height: 23px;
             font-weight: 600;
             margin-top: 5px;
             margin-bottom: 14px; 
-            text-align: justify;
+            
           }
         #blog .item-wrap figure figcaption .post-entry {
           margin-bottom: 21px; }
