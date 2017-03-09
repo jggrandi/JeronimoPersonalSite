@@ -1079,13 +1079,21 @@ button, input, select, textarea {
   z-index: 3; }
   #top-navigation .ident {
     color: #e7e7e7; }
-    #top-navigation .ident .vc-photo {
+    #top-navigation .ident .vc-photo  {
       -moz-transition: all .5s ease-in-out;
       -webkit-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out; }
       #top-navigation .ident .vc-photo a {
         width: 100%;
         height: 100%; }
+
+    #top-navigation .ident .vc-photo2  {
+      -moz-transition: all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out; }
+      #top-navigation .ident .vc-photo2 a {
+        width: 100%;
+        height: 100%; }        
     #top-navigation .ident .vc-name .name .name-title {
       padding: 17px 40px 18px 40px;
       min-height: 120px;
@@ -3262,7 +3270,7 @@ footer.light {
     margin-right: 0 !important;
     margin-left: 0 !important; }
     #top-navigation .ident .vc-name .position .pdf,
-  #top-navigation .ident .vc-name .name .name-pdf {
+  #top-navigation .ident .vc-name .name .name-pdf ,  #top-navigation .ident .vc-photo2.photo-01{
     display: none; }
 }
 @media (max-width: 600px) {
@@ -3316,6 +3324,9 @@ footer.light {
 
   #top-navigation .ident .vc-photo.photo-01 {
     min-height: 200px; }
+
+
+
 
   #top-navigation .menuitem {
     min-height: 50px; }
