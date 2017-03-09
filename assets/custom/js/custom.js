@@ -105,6 +105,9 @@
     // });
 
     /** Set of sections scripts **/
+
+
+
     function sectionsScripts() {
 
         /** Script for Animated Counter section **/
@@ -236,6 +239,7 @@
                     $('.year a').text('Year: ' + $(e.target).text());
                 });  
 
+
                 // Isotope Portfolio
                 var $grid = $('.grid').isotope({
                     itemSelector: '.grid-item',
@@ -260,8 +264,7 @@
                     $grid.isotope();
                 });
 
-
-
+                
                 $grid.isotope({filter: '*'});
 
                 // filter items on button click
