@@ -277,6 +277,23 @@
                     $grid.isotope({filter: filterValue});
                 });
 
+                // filter items on tag click
+                $('.post-tag').on('click', 'a', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({filter: filterValue});
+                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
+                });
+
+                // change is-checked class on buttons
+                $('#isotope-filters').each( function( i, buttonGroup ) {
+                  var $buttonGroup = $( buttonGroup );
+                  $buttonGroup.on( 'click', 'a', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $( this ).parent().addClass('is-checked');
+                  });
+                });
+
+                // filter items on button click
                 $('#isotope-filters2').on('click', 'a', function () {
                     var $this = $(this);
                     var $buttonGroup = $this.parents('.port-filter');
@@ -286,20 +303,11 @@
                     $grid.isotope({filter: filterValue});
                 });
 
-
                 // filter items on tag click
                 $('.post-tag').on('click', 'a', function () {
                     var filterValue = $(this).attr('data-filter');
                     $grid.isotope({filter: filterValue});
-                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
-                });
-                // change is-checked class on buttons
-                $('#isotope-filters').each( function( i, buttonGroup ) {
-                  var $buttonGroup = $( buttonGroup );
-                  $buttonGroup.on( 'click', 'a', function() {
-                    $buttonGroup.find('.is-checked').removeClass('is-checked');
-                    $( this ).addClass('is-checked');
-                  });
+                    $('#isotope-filters2 a[data-filter="' + filterValue + '"]').focus();
                 });
 
                 // change is-checked class on buttons
@@ -307,9 +315,10 @@
                   var $buttonGroup = $( buttonGroup );
                   $buttonGroup.on( 'click', 'a', function() {
                     $buttonGroup.find('.is-checked').removeClass('is-checked');
-                    $( this ).addClass('is-checked');
+                    $( this ).parent().addClass('is-checked');
                   });
                 });
+
 
                 // flatten object by concatting values
                 function concatValues( obj ) {
