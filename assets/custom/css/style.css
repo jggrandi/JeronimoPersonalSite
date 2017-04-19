@@ -1032,7 +1032,7 @@ button, input, select, textarea {
   border: none;
   width: 33.33333333%; }
 
-.col-md-4-adj.flex-column {
+.col-md-4.flex-column-adj {
   flex-shrink: 1;
   flex-basis: auto;
   display: -webkit-flex;
@@ -1042,14 +1042,6 @@ button, input, select, textarea {
   width: 37.5%; }
 
 
-.col-md-4.flex-columnAdjusted {
-  flex-shrink: 1;
-  flex-basis: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
-  width: 30.5%; }
 
 .col-md-8.flex-column {
   flex-shrink: 1;
@@ -1060,7 +1052,7 @@ button, input, select, textarea {
   border: none;
   width: 66.66666667%; }
 
-.col-md-8-adj.flex-column {
+.col-md-8.flex-column-adj {
   flex-shrink: 1;
   flex-basis: auto;
   display: -webkit-flex;
@@ -1069,14 +1061,6 @@ button, input, select, textarea {
   border: none;
   width: 62.5%; }
 
-.col-md-8.flex-columnAdjusted {
-  flex-shrink: 1;
-  flex-basis: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border: none;
-  width: 69.5%; }
 
 .flex-panel {
   width: 100%; }
@@ -1086,7 +1070,9 @@ button, input, select, textarea {
     display: block; }
 
   .flex-column {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .flex-column-adj {
+    width: 100% !important; }}
 /*------------------------------------------------------------------
 [VCard Modules]
 */
