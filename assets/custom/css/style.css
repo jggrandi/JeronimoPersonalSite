@@ -1908,6 +1908,7 @@ figure.effect-goliath {
     color: #ffffff; }
 
 
+
 #portfolio2 .item-wrap {
   margin-bottom: 10px; }
 #portfolio2 .grid {
@@ -2060,6 +2061,15 @@ figure.effect-goliath {
   top: 50%;
   left: 50%;
   transform: translate(-49%, -51%); }
+
+#portfolio-item-page h2 {
+  font-size: 38px; }
+
+#portfolio-item-page .post-meta {
+  font-size: 16px; 
+  letter-spacing: 1px;
+  color:#676767;
+  }  
 
 /*------------------------------------------------------------------
 [Homepage Sections]
@@ -3211,6 +3221,7 @@ footer.light {
   #photos .photo-caption {
     position: relative;
     transform: none; } 
+ 
 
 }
 @media (max-width: 767px) {
@@ -3277,6 +3288,7 @@ footer.light {
     #top-navigation .ident .vc-name .position .pdf,
   #top-navigation .ident .vc-name .name .name-pdf ,  #top-navigation .ident .vc-photo2.photo-01{
     display: none; }
+
 }
 @media (max-width: 600px) {
   .media-body, .media-left, .media-right {
@@ -3349,6 +3361,15 @@ footer.light {
   #page-title p {
     line-height: 1.5em; }
   #page-title h2 {
-    font-size: 32px; } }
+    font-size: 32px; } 
+#portfolio-item-page h2 {
+  font-size: 24px; }
+
+#portfolio-item-page .post-meta {
+  font-size: 12px; 
+  letter-spacing: 1px;
+  color:#676767;
+  } 
+  }
 
 /*# sourceMappingURL=style.css.map */
