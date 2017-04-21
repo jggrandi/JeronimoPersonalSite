@@ -1216,11 +1216,12 @@ button, input, select, textarea {
   
 }
 
-#mybread .breadcrumb { background: #008040; border-radius: 0px; display: block;padding-left: 30px;}
-#mybread .breadcrumb ol {font-size: #b3b3b3px; }
+#mybread .breadcrumb { background: #008040; border-radius: 0px; display: flex; overflow: hidden;}
+/*#mybread .breadcrumb ol {font-size: #b3b3b3px; }*/
 #mybread .breadcrumb a {color: rgba(255, 255, 255, 1);}
 #mybread .breadcrumb a:hover {color: rgba(42, 100, 150, 1);}
 #mybread .breadcrumb>.active {color: rgba(196, 196, 196, 1);}
+#mybread .breadcrumb li {height: 25px;}
 #mybread .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
 
 /* Animated Title */
