@@ -2063,6 +2063,10 @@ figure.effect-goliath {
   left: 50%;
   transform: translate(-49%, -51%); }
 
+<<<<<<< HEAD
+
+
+=======
 #portfolio-item-page h2 {
   font-size: 38px; }
 
@@ -2071,6 +2075,7 @@ figure.effect-goliath {
   letter-spacing: 1px;
   color:#676767;
   }  
+>>>>>>> af7456e5764b32941243e09928716b8199c4821d
 
 /*------------------------------------------------------------------
 [Homepage Sections]
@@ -2838,6 +2843,22 @@ text-align: justify;
     font-style: oblique; }
     #blog-list #comments .post-author a {
       font-size: 18px; }
+
+#blog .panel-heading{
+  padding: 0px;
+}
+
+#blog .panel-title a{
+  display: block; padding: 10px 15px;
+}
+
+#blog  .panel-body{
+  padding: 0px;
+}
+
+#blog .panel-body a{
+  display: block; padding: 10px 15px;
+}
 
 blockquote {
   font-family: "Lora", serif;
