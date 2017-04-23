@@ -268,7 +268,7 @@
                 $grid.isotope({filter: '*'});
 
                 // filter items on button click
-                $('#isotope-filters').on('click', 'a', function () {
+                $('.isotope-filters').on('click', 'a', function () {
                     var $this = $(this);
                     var $buttonGroup = $this.parents('.port-filter');
                     var filterGroup = $buttonGroup.attr('data-filter-group');
@@ -281,41 +281,15 @@
                 $('.post-tag').on('click', 'a', function () {
                     var filterValue = $(this).attr('data-filter');
                     $grid.isotope({filter: filterValue});
-                    $('#isotope-filters a[data-filter="' + filterValue + '"]').focus();
+                    $('.isotope-filters a[data-filter="' + filterValue + '"]').focus();
                 });
 
                 // change is-checked class on buttons
-                $('#isotope-filters').each( function( i, buttonGroup ) {
+                $('.isotope-filters').each( function( i, buttonGroup ) {
                   var $buttonGroup = $( buttonGroup );
                   $buttonGroup.on( 'click', 'a', function() {
                     $buttonGroup.find('.is-checked').removeClass('is-checked');
-                    $( this ).parent().addClass('is-checked');
-                  });
-                });
-
-                // filter items on button click
-                $('#isotope-filters2').on('click', 'a', function () {
-                    var $this = $(this);
-                    var $buttonGroup = $this.parents('.port-filter');
-                    var filterGroup = $buttonGroup.attr('data-filter-group');
-                    filters[ filterGroup ] = $this.attr('data-filter');
-                    var filterValue = concatValues( filters );
-                    $grid.isotope({filter: filterValue});
-                });
-
-                // filter items on tag click
-                $('.post-tag').on('click', 'a', function () {
-                    var filterValue = $(this).attr('data-filter');
-                    $grid.isotope({filter: filterValue});
-                    $('#isotope-filters2 a[data-filter="' + filterValue + '"]').focus();
-                });
-
-                // change is-checked class on buttons
-                $('#isotope-filters2').each( function( i, buttonGroup ) {
-                  var $buttonGroup = $( buttonGroup );
-                  $buttonGroup.on( 'click', 'a', function() {
-                    $buttonGroup.find('.is-checked').removeClass('is-checked');
-                    $( this ).parent().addClass('is-checked');
+                    $( this ).addClass('is-checked');
                   });
                 });
 

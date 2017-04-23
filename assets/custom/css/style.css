@@ -1826,6 +1826,9 @@ figure.effect-goliath {
         text-decoration: none; }
       #portfolio .portfolio-caption h4 a:visited, #blog .portfolio-caption h4 a:visited, #portfolio-item-page .portfolio-caption h4 a:visited {
         text-decoration: none; }
+#blog .small-screen{
+  display: none;
+}
 #portfolio .port-filter ul, #blog .port-filter ul, #portfolio-item-page .port-filter ul {
   list-style: none;
   padding: 0; }
@@ -1833,7 +1836,7 @@ figure.effect-goliath {
     display: inline-block; }
     #portfolio .port-filter ul li a, #blog .port-filter ul li a, #portfolio-item-page .port-filter ul li a {
       position: relative;
-      padding: 12px 24px;
+      padding: 12px 12px;
       margin-right: 1px;
       text-transform: uppercase;
       font-size: 12px;
@@ -3243,7 +3246,10 @@ footer.light {
   #photos .photo-caption {
     position: relative;
     transform: none; } 
- 
+     #blog .large-screen{
+  display: none;}
+    #blog .small-screen{
+  display: block; 
 
 }
 @media (max-width: 767px) {
@@ -3310,6 +3316,8 @@ footer.light {
     #top-navigation .ident .vc-name .position .pdf,
   #top-navigation .ident .vc-name .name .name-pdf ,  #top-navigation .ident .vc-photo2.photo-01{
     display: none; }
+ 
+}
 
 }
 @media (max-width: 600px) {

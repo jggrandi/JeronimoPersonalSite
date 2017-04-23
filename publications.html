@@ -117,40 +117,63 @@
       <!-- Blog Block -->
 
        <section id="page-title" class="inner-section-30 ui-menu-color00">
-         <div class="container-fluid nopadding">
-           <div class="panel-group col-md-6 col-sm-6 col-xs-6">
-             <div class="panel panel-default">
-               <div class="panel-heading" >
-                 <h4 class="panel-title category">
-                   <a data-toggle="collapse" href="#isotope-filters">Category: All</a>
-                 </h4>
+         <div class="container-fluid nopadding large-screen">
+           <div class=" col-md-6 col-sm-6 col-xs-6">
+               <div class="isotope-filters port-filter port-filter-light text-center" data-filter-group="general">
+                  <ul>
+                     <li><a class="is-checked" href="#all"  data-filter="*">All</a></li>
+                     <li><a href="#paper" data-filter=".paper">Paper</a></li>
+                     <li><a href="#poster" data-filter=".poster">Poster</a></li>
+                     <li><a href="#bookchapter" data-filter=".bookchapter">Book Chapter</a></li>
+                     <li><a href="#others" data-filter=".others">Others</a></li>
+                  </ul>
+               </div>            
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+               <div class="isotope-filters port-filter port-filter-light text-center" data-filter-group="year">
+                  <ul>
+                     <li><a class="is-checked" href="#all" class="" data-filter="*">All</a></li>
+                     <li><a href="#2017" data-filter=".2017">2017</a></li>
+                     <li><a href="#2016" data-filter=".2016">2016</a></li>
+                     <li><a href="#2015" data-filter=".2015">2015</a></li>
+                     <li><a href="#2014-" data-filter=".2014-">2014 and before</a></li>
+                  </ul>
+               </div>          
+            </div>   
+         </div>
+         <div class="container-fluid nopadding small-screen">
+            <div class=" col-md-6 col-sm-6 col-xs-6">
+               <div class="panel panel-default">
+                  <div class="panel-heading" >
+                    <h4 class="panel-title category">
+                      <a data-toggle="collapse" href=".pcollapse">Category: All</a>
+                    </h4>
+                  </div>
+                  <div class="isotope-filters pcollapse panel-collapse collapse port-filter text-center" data-filter-group="general">
+                    <div class="panel-body is-checked" ><a href="#all"  data-filter="*">All</a></div>
+                    <div class="panel-body"><a href="#paper" data-filter=".paper">Paper</a></div>
+                    <div class="panel-body"><a href="#poster" data-filter=".poster">Poster</a></div>
+                    <div class="panel-body"><a href="#bookchapter" data-filter=".bookchapter">Book Chapter</a></div>
+                    <div class="panel-body"><a href="#others" data-filter=".others">Others</a></div>
+                  </div>
                </div>
-               <div id="isotope-filters" class="pcollapse panel-collapse collapse port-filter text-center" data-filter-group="general">
-                 <div class="panel-body is-checked" ><a href="#all"  data-filter="*">All</a></div>
-                 <div class="panel-body"><a href="#paper" data-filter=".paper">Paper</a></div>
-                 <div class="panel-body"><a href="#poster" data-filter=".poster">Poster</a></div>
-                 <div class="panel-body"><a href="#bookchapter" data-filter=".bookchapter">Book Chapter</a></div>
-                 <div class="panel-body"><a href="#others" data-filter=".others">Others</a></div>
+            </div>
+            <div class=" col-md-6 col-sm-6 col-xs-6">         
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title year">
+                      <a data-toggle="collapse" href=".pcollapse2">Year: All</a>
+                    </h4>
+                  </div>
+                  <div class=" isotope-filters pcollapse2 panel-collapse collapse port-filter text-center" data-filter-group="year">
+                    <div class="panel-body is-checked"><a href="#all" class="" data-filter="*">All</a></div>
+                    <div class="panel-body"><a href="#2017" data-filter=".2017">2017</a></div>
+                    <div class="panel-body"><a href="#2016" data-filter=".2016">2016</a></div>
+                    <div class="panel-body"><a href="#2015" data-filter=".2015">2015</a></div>
+                    <div class="panel-body"><a href="#2014-" data-filter=".2014-">2014 and before</a></div>
+                  </div>
                </div>
-             </div>
-           </div>
-          <div class="panel-group col-md-6 col-sm-6 col-xs-6">
-             <div class="panel panel-default">
-               <div class="panel-heading">
-                 <h4 class="panel-title year">
-                   <a data-toggle="collapse" href="#isotope-filters2">Year: All</a>
-                 </h4>
-               </div>
-               <div id="isotope-filters2" class="pcollapse2 panel-collapse collapse port-filter text-center" data-filter-group="year">
-                 <div class="panel-body is-checked"><a href="#all" class="" data-filter="*">All</a></div>
-                 <div class="panel-body"><a href="#2017" data-filter=".2017">2017</a></div>
-                 <div class="panel-body"><a href="#2016" data-filter=".2016">2016</a></div>
-                 <div class="panel-body"><a href="#2015" data-filter=".2015">2015</a></div>
-                 <div class="panel-body"><a href="#2014-" data-filter=".2014-">2014 and before</a></div>
-               </div>
-             </div>
-           </div>
-             
+            </div>
          </div>
       </section>
 
