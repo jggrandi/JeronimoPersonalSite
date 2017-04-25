@@ -1919,6 +1919,15 @@ figure.effect-goliath {
     text-decoration: none;
     background: #007700;
     color: #ffffff; }
+#portfolio .item-description{
+    line-height: 1.8em;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  color: #2f2f2f;
+  letter-spacing: 1px;
+  text-align: justify;
+}
 
 
 
@@ -2075,19 +2084,16 @@ figure.effect-goliath {
   left: 50%;
   transform: translate(-49%, -51%); }
 
-<<<<<<< HEAD
-
-
-=======
 #portfolio-item-page h2 {
   font-size: 38px; }
 
 #portfolio-item-page .post-meta {
-  font-size: 16px; 
+  font-size: 14px; 
   letter-spacing: 1px;
   color:#676767;
+  margin-top: 16px;
   }  
->>>>>>> af7456e5764b32941243e09928716b8199c4821d
+
 
 /*------------------------------------------------------------------
 [Homepage Sections]
@@ -3404,10 +3410,15 @@ footer.light {
 #portfolio-item-page h2 {
   font-size: 24px; }
 
+#portfolio-item-page h3 {
+  font-size: 18px; }
+
+
 #portfolio-item-page .post-meta {
   font-size: 12px; 
   letter-spacing: 1px;
   color:#676767;
+  margin-top: 10px;
   } 
   }
 
