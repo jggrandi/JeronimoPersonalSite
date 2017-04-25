@@ -245,6 +245,7 @@
                     itemSelector: '.grid-item',
                     percentPosition: true,
                     transitionDuration: '0.6s',
+                    columnWidth: '.grid-sizer'
                      // hiddenStyle: {
                      //     opacity: 0
                      // },
