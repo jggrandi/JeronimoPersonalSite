@@ -1,6 +1,6 @@
 /* Main Photo */
 .photo-01 {
-  background: url("../../images/layouts/userpics/userpic01.jpg");
+  background: url("../../images/userpics/userpic01.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,22 +16,22 @@
   transition: all .5s ease-in-out; }
 
 .timeline-jeronimo-01 {
-  background: url("../../images/layouts/timeline/01.jpg");
+  background: url("../../images/timeline/01.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-jeronimo-02 {
-  background: url("../../images/layouts/timeline/02.jpg");
+  background: url("../../images/timeline/02.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-jeronimo-03 {
-  background: url("../../images/layouts/timeline/03.jpg");
+  background: url("../../images/timeline/03.jpg");
   background-position: center;
   background-size: cover; }
 
 .timeline-jeronimo-04 {
-  background: url("../../images/layouts/timeline/04.jpg");
+  background: url("../../images/timeline/04.jpg");
   background-position: center;
   background-size: cover; }
 
