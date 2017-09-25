@@ -1506,11 +1506,15 @@ button, input, select, textarea {
       /*text-transform: uppercase;*/
       font-size: 12px;
       letter-spacing: 1px; }
-    #timeline .timeline-vert .timeline-panel h3, #timeline .timeline-vert .timeline-panel h4, #timeline .timeline-vert .timeline-panel h6, #timeline .timeline-vert .timeline-panel p {
+    #timeline .timeline-vert .timeline-panel h3, #timeline .timeline-vert .timeline-panel h4, #timeline .timeline-vert .timeline-panel h6{
       -moz-transition: all .5s ease-in-out;
       -webkit-transition: all .5s ease-in-out;
       transition: all .5s ease-in-out; }
-
+    #timeline .timeline-vert .timeline-panel p{
+      text-align: justify;
+      -moz-transition: all .5s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out; }
 #timeline.dark .timeline-vert:before {
   background-color: #f7f7f7; }
 #timeline.dark .timeline-vert .timeline-badge {
@@ -1611,6 +1615,8 @@ button, input, select, textarea {
   margin-top: 5px; }
 
 /* Horizontal Timeline */
+#horiz-timeline.dark h3 {
+  color: #ffffff; }
 .cd-horizontal-timeline {
   opacity: 0;
   margin: 0 auto;
@@ -1656,7 +1662,7 @@ button, input, select, textarea {
       bottom: 0;
       z-index: 2;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
       padding-bottom: 15px;
       /* fix bug on Safari - text flickering while timeline translates */
       -webkit-transform: translateZ(0);
@@ -1770,7 +1776,7 @@ button, input, select, textarea {
   right: 0; }
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #E84855; }
+  border-color: #4f4f4f; }
 
 .cd-timeline-navigation a.inactive {
   cursor: not-allowed; }
@@ -1926,21 +1932,21 @@ button, input, select, textarea {
       border: 2px solid #dfdfdf;
       background-color: #f8f8f8; }
     .dark .cd-horizontal-timeline .events a .older-event::after {
-      border-color: #E84855; }
+      border-color: #4f4f4f; }
   .dark .cd-horizontal-timeline .events a.selected {
-    color: #E84855;
+    color: #4f4f4f;
     pointer-events: none; }
     .dark .cd-horizontal-timeline .events a.selected::after {
-      background-color: #E84855;
-      border-color: #E84855; }
+      background-color: #4f4f4f;
+      border-color: #4f4f4f; }
   .dark .cd-horizontal-timeline .events a:hover,
   .dark .cd-horizontal-timeline .events a:focus,
   .dark .cd-horizontal-timeline .events a.selected:hover,
   .dark .cd-horizontal-timeline .events a.selected:focus {
     text-decoration: none;
-    color: #E84855; }
+    color: #4f4f4f; }
 .dark .cd-horizontal-timeline .filling-line {
-  background-color: #E84855; }
+  background-color: #4f4f4f; }
 .dark .cd-horizontal-timeline .cd-timeline-navigation a {
   border: 2px solid #dfdfdf; }
 .dark .cd-horizontal-timeline .cd-timeline-navigation a.inactive::after {
@@ -3048,7 +3054,9 @@ text-align: justify;
 .inner-content .inner-section {
   padding: 30px 60px; }
 .inner-content-30 .inner-section-30 {
-  padding: 30px 30px; }  
+  padding: 30px 30px; } 
+.inner-content .inner-section-45 {
+  padding: 30px 45px; } 
 .inner-content .inner-block {
   padding: 0 60px; }
 
