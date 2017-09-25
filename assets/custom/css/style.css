@@ -3016,6 +3016,31 @@ text-align: justify;
     right: -10px;
     top: -10px; }
 
+  #page-title .name-pdf {
+      text-align: center; }
+  #page-title .name-pdf a {
+        width: 100%;
+        text-decoration: none;
+        color: #ffffff; }
+  #page-title .name-pdf a i {
+          display: block; }
+  #page-title .name-pdf a:hover i:before {
+          opacity: 1; }
+
+
+  #page-title .name-pdf a i:before {
+    display: block;
+    text-align: center;
+    width: 100%;
+    opacity: .6;
+    color: #efefef;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    /*padding-left: 30px;*/
+  }
+
+
 /*------------------------------------------------------------------
 [Inner Pages Sections]
 */
@@ -3701,8 +3726,12 @@ footer.light {
   display: none;}
     #blog .small-screen{
   display: block; 
-
 }
+
+  #page-title .name-pdf a i:before {
+    padding-left: 0px;
+  }
+
 @media (max-width: 767px) {
   .check {
     right: 10px; }
@@ -3843,6 +3872,8 @@ footer.light {
     line-height: 1.5em; }
   #page-title h2 {
     font-size: 32px; }
+
+
 
 #portfolio-item-page h2 {
   font-size: 24px; }
