@@ -1045,7 +1045,16 @@ button, input, select, textarea {
   display: -ms-flexbox;
   display: flex;
   border: none;
-  width: 37.5%; }
+  width: 44.5%; }
+
+.col-md-4.flex-column-adj2 {
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  width: 29%; }
 
 
 
@@ -1065,7 +1074,16 @@ button, input, select, textarea {
   display: -ms-flexbox;
   display: flex;
   border: none;
-  width: 62.5%; }
+  width: 55.5%; }
+
+.col-md-8.flex-column-adj2 {
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  width: 75%; }
 
 
 .flex-panel {
@@ -1078,7 +1096,11 @@ button, input, select, textarea {
   .flex-column {
     width: 100% !important; }
   .flex-column-adj {
+    width: 100% !important; }
+
+  .flex-column-adj2 {
     width: 100% !important; }}
+
 /*------------------------------------------------------------------
 [VCard Modules]
 */
@@ -3184,7 +3206,8 @@ text-align: justify;
           #blog .item-wrap figure figcaption .post-header h5 {
             /*font-size: 15px;
             text-align: justify;*/
-            letter-spacing: 2px;
+            color:#9c9c9c;
+            letter-spacing: 1px;
             line-height: 23px;
             font-weight: 600;
             margin-top: 5px;
@@ -3878,7 +3901,8 @@ footer.light {
     display: none !important; }
 
   #page-title p {
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    text-align: justify; }
   #page-title h2 {
     font-size: 32px; }
 
